@@ -53,8 +53,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Download built artifact
-      uses: actions/download-artifact@master
+    - name: Download built artifact from previous step
+      uses: actions/download-artifact@main
       with:
         name: webpack artifacts
         path: public
